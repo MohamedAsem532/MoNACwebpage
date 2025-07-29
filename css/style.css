@@ -14,8 +14,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size:100%;
-    background-image: url('../images/Learning\ Teacher.png'); /* adjust path */
-     ; /* or any value like vh, %, etc. */
+    background-image: url('../images/Learning\ Teacher.png'); 
     min-height: 600;
     padding: 30px;
 
