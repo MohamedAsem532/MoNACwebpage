@@ -14,7 +14,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size:100%;
-    background-image: url("../images/learning-teacher.png"); 
+    background-image: url(../Images/learning-teacher.png); 
     min-height: 600px;
     padding: 30px;
 
