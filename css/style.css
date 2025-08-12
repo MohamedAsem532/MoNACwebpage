@@ -88,16 +88,25 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  min-width: 30px;
-  max-width: 60px;
+  min-width: 40px;
+  max-width: 80px;
   min-height: 40px;
   max-height: 80px;
   padding: 0px;
-  right: 15%;
+  right: 18%;
   background-color: #ECC67B;
   position: fixed;
 }
 
+#theme-switch img:last-child{
+  display: none;
+}
+.darkmode #theme-switch img:first-child{
+  display: none;
+}
+.darkmode #theme-switch img:last-child{
+  display: block;
+}
 
 .navbar .auth{
     display: flex;
