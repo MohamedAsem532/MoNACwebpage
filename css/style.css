@@ -6,7 +6,7 @@
 
 :root{
     --color-bg-main:#FFFEFD;
-    --color-bg-secondsec:#FDF6E4;
+    --color-bg-secondsec:white;
     --color-bg-promo:#fff0d2;
     --color-bg-footer:#FDF6E4;
     --text-color:black;
@@ -169,6 +169,7 @@ body {
 .Second-Section{
   padding: 80px 20px;
   background-color: var(--color-bg-secondsec);
+  
 }
 .Second-Section .stat {
   display: flex;
