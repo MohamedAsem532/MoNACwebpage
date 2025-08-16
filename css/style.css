@@ -147,7 +147,7 @@ body {
 }
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: row; /* side by side on larger screens */
+    flex-direction: column; /* side by side on larger screens */
     text-align: left;
   }
 }
@@ -564,6 +564,14 @@ body {
   width: 300px;
 }
 
+@media (max-width: 600px) {
+  .cta-container {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+  }
+}
 .cta-text{
   padding: 20px 50px;
   margin-bottom: 55;
