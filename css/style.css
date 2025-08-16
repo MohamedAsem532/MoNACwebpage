@@ -114,6 +114,7 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
+    /* d */
 
 }
 .navbar .auth a{
