@@ -180,7 +180,7 @@ body {
 .Enroll p {
   font-weight: 20;
   margin-bottom: 20px;
-  margin-right: 40;
+  margin-right: 40px;
   line-height: 1.5;
 }
 .Enroll button{
@@ -212,7 +212,7 @@ body {
   text-align: center;
   border-right: 3px solid #ccc;
   border-color: #ECC67B;
-  padding-right: 50;
+  padding-right: 50px;
   line-height: 10px;
 
 }
@@ -311,7 +311,7 @@ body {
 
 .special-feature img{
   width: 8%;
-  padding-right: 32;
+  padding-right: 32px;
   
 }
 
@@ -388,7 +388,7 @@ body {
 
 .popular-courses{
   
-  padding: 100 90 50 100;
+  padding: 100px 90px 50px 100px;
   background-color: black;
 
 }
@@ -433,13 +433,13 @@ body {
 }
 
 .course-meta{
-  padding: 25 30 30 30;
+  padding: 25px 30px 30px 30px;
   display: flex;
   justify-content: space-between;
 }
 
 .course-card h3{
-  padding-left: 35;
+  padding-left: 35px;
   margin-bottom: 15px;
   text-align: left;
   font-size: 20;
@@ -450,9 +450,9 @@ body {
   
   border-radius: 50px;
   border-color: black;
-  padding: 15 20;
+  padding: 15px 20px;
   margin-right: 50%;
-  margin-top: 15;
+  margin-top: 15px;
   cursor: pointer;
   background-color: white;
   font-weight: bold;
@@ -462,9 +462,9 @@ body {
   
   border-radius: 50px;
   border-color: black;
-  padding: 15 20;
+  padding: 15px 20px;
   margin-right: 50%;
-  margin-top: 15;
+  margin-top: 15px;
   cursor: pointer;
   background-color:#F9C265;
   font-weight: bold;
@@ -502,9 +502,9 @@ body {
 }
 
 .easy-content p{
-    margin-top: 20;
-    padding-right: 55;
-    max-width: 400;
+    margin-top: 20px;
+    padding-right: 55px;
+    max-width: 400px;
     color: var(--description-text-color);
    
     
@@ -522,8 +522,8 @@ body {
 }
 .easy-content ul{
     
-    margin-top: 30;
-    padding-right: 55;
+    margin-top: 30px;
+    padding-right: 55px;
     max-width: 500;
     line-height: 2;
     list-style-type: none;
@@ -578,7 +578,7 @@ body {
 }
 .cta-text{
   padding: 20px 50px;
-  margin-bottom: 55;
+  margin-bottom: 55px;
   
 }
 
@@ -651,7 +651,7 @@ footer{
 
 }
 .footer-container{
-  padding: 80 75;
+  padding: 80px 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -666,7 +666,7 @@ footer{
 
 .footer-left{
   max-width: 300;
-  padding: 30;
+  padding: 30px;
 
 
 }
@@ -678,7 +678,7 @@ footer{
 }
 .footer-left p{
   color:#8a8989;
-  margin: 15 auto;
+  margin: 15px auto;
   
 
 
