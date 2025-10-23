@@ -5,6 +5,7 @@
 }
 
 :root{
+    --color-nav-bar:#FFC75D;
     --color-bg-main:#FFFEFD;
     --color-bg-secondsec:white;
     --color-bg-promo:#fff0d2;
@@ -44,11 +45,19 @@ body {
  
      
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40 ;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;           /* Make it span the full screen width */
+  background-color: var(--color-nav-bar);
+  z-index: 1000;         /* Keep it above all other sections */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;    /* Add some padding for nice spacing */
+  border-bottom: 2px solid black;
+  border-radius: 0 0 15px 15px;
 }
 
 
@@ -66,6 +75,7 @@ body {
   max-width: 4%;
   min-width: 30px;
   height: auto;
+  
  
   
 }
@@ -145,6 +155,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 60px;
+  padding-top: 80px;
   text-align: center;
   
   
@@ -666,16 +677,16 @@ footer{
 
 .footer-left{
   max-width: 300;
-  padding: 30px;
+  padding: 20px;
 
 
 }
-.footer-left h3{
+.footer-logo {
   display: flex;
-  gap: 5px;
-  margin-bottom: 20px;
-  
+  align-items: center;
+  gap: 15px; /* space between logo and text */
 }
+
 .footer-left p{
   color:#8a8989;
   margin: 15px auto;
@@ -684,13 +695,10 @@ footer{
 
 }
 .footer-left img{
-  width: 20;
-  background-color: #ECC67B;
-  border-radius: 25px;
   
-
+  width: 10%;
+ 
 }
-
 
 .footer-column{
   display: grid;  
