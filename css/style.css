@@ -8,6 +8,7 @@
   --color-nav-bar: #ffc75d;
   --color-bg-main: #fffefd;
   --color-bg-secondsec: white;
+  --color-card:white;
   --color-bg-promo: #fff0d2;
   --color-bg-footer: #fdf6e4;
   --text-color: black;
@@ -19,6 +20,7 @@
   --color-bg-main: black;
   --color-bg-secondsec: #1a1a19;
   --color-bg-promo: #1a1a19;
+  --color-card:#ffc75d;
   --color-bg-footer: #1a1a19;
   --text-color: #ecc67b;
   --text-bg-color: #ecc67b;
@@ -96,7 +98,10 @@ body {
   padding: 0px;
   right: 18%;
   margin: auto 10px;
-  background-color: #ecc67b;
+  background-color: var(--text-color);
+}
+#theme-switch:hover{
+  background: var(--color-nav-bar);
 }
 
 #theme-switch img:last-child {
@@ -319,7 +324,7 @@ body {
 }
 
 .feature-card {
-  background: #fff;
+  background: var(--color-card);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   padding: 30px 20px;
@@ -334,6 +339,7 @@ body {
 .feature-card img {
   width: 50px;
   margin-bottom: 20px;
+  
 }
 
 .feature-card h3 {
@@ -480,7 +486,6 @@ body {
   background-color: #1b1b1b;
   border-radius: 50%;
 }
-
 .cta-banner {
   background-color: var(--color-bg-main);
   display: flex;
