@@ -43,13 +43,16 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Make it span the full screen width */
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  overflow-x: hidden;
   background-color: var(--color-nav-bar);
   z-index: 1000; /* Keep it above all other sections */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px; /* Add some padding for nice spacing */
+
   border-bottom: 2px solid black;
   border-radius: 0 0 15px 15px;
 }
@@ -63,12 +66,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 75%;
   margin: auto;
 }
 
 .navbar .title img {
   max-width: 5%;
   height: auto;
+}
+.navbar .title a {
+  text-decoration: none;
+  color: black;
 }
 .navbar .nav-links {
   padding: 10px;
@@ -104,7 +112,6 @@ body {
 
 #theme-switch img:last-child {
   display: none;
-  
 }
 .darkmode #theme-switch img:first-child {
   display: none;
@@ -137,6 +144,14 @@ body {
 .btn-signup:hover {
   background: #262525;
 }
+.toggle-btn {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 35px;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
 
 .hero-section {
   display: flex;
@@ -146,12 +161,6 @@ body {
   margin-top: 60px;
   padding-top: 80px;
   text-align: center;
-}
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column; /* side by side on larger screens */
-    text-align: left;
-  }
 }
 
 .Improve h1 {
@@ -259,6 +268,15 @@ body {
   border-color: #000;
   background-color: #f9c265;
 }
+.education-image img {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .feature-section {
   padding: 100px 90px 50px 100px;
@@ -266,10 +284,11 @@ body {
 }
 
 .features-top {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 70px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .special-feature {
@@ -320,6 +339,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 70px;
   margin-top: 40px;
+  justify-content: center;
 }
 
 .feature-card {
@@ -378,6 +398,7 @@ body {
   gap: 70px;
   margin-top: 90px;
   text-align: center;
+  justify-content: center;
 }
 
 .course-card {
@@ -385,7 +406,9 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   padding: 70px 20px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s ease;
 }
 
@@ -484,6 +507,14 @@ body {
   background-color: #1b1b1b;
   border-radius: 50%;
 }
+.easy-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .cta-banner {
   background-color: var(--color-bg-main);
   display: flex;
@@ -494,12 +525,13 @@ body {
 }
 
 .cta-container {
-  max-width: 800px;
   border-radius: 15px;
   margin-bottom: -80px;
-  margin-left: 25%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #f9c265;
   display: flex;
+  flex-wrap: wrap;
   padding: 10px 20px;
   align-items: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -509,7 +541,7 @@ body {
   width: 300px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
   .cta-container {
     max-width: 100%;
     margin-left: auto;
@@ -518,7 +550,7 @@ body {
   }
 }
 .cta-text {
-  padding: 20px 50px;
+  padding: 20px 30px;
   margin-bottom: 55px;
 }
 
@@ -621,11 +653,11 @@ footer {
 }
 .copyright {
   position: absolute;
-  bottom: 20px; 
+  bottom: 20px;
   left: 0;
   width: 100%; /* span full width of footer */
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   padding: 0 75px; /* same horizontal padding as footer-container */
   color: #8a8989;
@@ -633,7 +665,6 @@ footer {
 .copyright a {
   text-decoration: none;
   color: #8a8989;
-
 }
 .copyright a:hover {
   color: #ffffff;
@@ -657,4 +688,37 @@ footer {
 html,
 body {
   max-width: 100%;
+}
+@media (max-width: 992px) {
+  .hero-section,
+  .Second-Section,
+  .Third-Section,
+  .feature-section,
+  .popular-courses,
+  .easy-start {
+    flex-direction: column; /* side by side on larger screens */
+    text-align: left;
+  }
+  .header .navbar .nav-links,
+  #theme-switch,
+  .header .navbar .auth {
+    display: none;
+  }
+  .header .navbar .toggle-btn {
+    display: block;
+  }
+  .header .navbar .title {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .features-top {
+    grid-template-columns: 2.1fr 1fr; /* first column (special-feature) is wider */
+  }
+
+  /* allow the card to fill its grid column and add the requested right margin */
+  .features-top > .feature-card {
+    width: 100%;
+    justify-self: end; /* keep the card aligned toward the right of its column */
+  }
 }
