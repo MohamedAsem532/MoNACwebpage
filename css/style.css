@@ -736,6 +736,9 @@ body {
     width: auto;
     gap: 15px;
   }
+  .navbar .title {
+    width: auto;
+  }
   .navbar .auth {
     width: auto;
   }
