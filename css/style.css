@@ -38,6 +38,8 @@ body {
   background-image: url("../Images/learning-teacher.png");
   min-height: 600px;
   padding: 30px;
+  width: 100%;
+  max-width: 100%;
 }
 .navbar {
   position: fixed;
@@ -48,11 +50,10 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background-color: var(--color-nav-bar);
-  z-index: 1000; /* Keep it above all other sections */
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-bottom: 2px solid black;
   border-radius: 0 0 15px 15px;
 }
@@ -164,7 +165,7 @@ body {
 }
 
 .Improve h1 {
-  font-size: 42px;
+  font-size: clamp(28px, 8vw, 42px);
   font-weight: 700;
   margin-bottom: 20px;
   margin-left: 30px;
@@ -232,8 +233,9 @@ body {
 }
 
 .Third-Section {
-  padding: 50px 120px;
+  padding: 50px;
   background-color: #fdf6e4;
+  max-width: 100%;
 }
 .education-content {
   display: flex;
@@ -279,15 +281,15 @@ body {
 }
 
 .feature-section {
-  padding: 100px 90px 50px 100px;
+  padding: 100px 50px;
   background-color: var(--color-bg-main);
+  max-width: 100%;
 }
 
 .features-top {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   gap: 70px;
-  align-items: stretch;
   justify-content: center;
 }
 
@@ -302,7 +304,7 @@ body {
 }
 
 .special-feature img {
-  width: 8%;
+  width: 5%;
   padding-right: 32px;
 }
 
@@ -372,8 +374,9 @@ body {
 }
 
 .popular-courses {
-  padding: 100px 90px 50px 100px;
+  padding: 100px 50px;
   background-color: black;
+  max-width: 100%;
 }
 
 .popular-courses h1 {
@@ -619,11 +622,11 @@ footer {
   background-color: var(--color-bg-footer);
 }
 .footer-container {
-  padding: 80px 75px;
+  padding: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 100%;
   min-height: 400px;
   margin: auto;
   margin-bottom: -20;
@@ -631,14 +634,16 @@ footer {
   border-top-left-radius: 55px;
   background-color: #1d1d1d;
   position: relative;
+  gap: 30px;
 }
 
 .footer-left {
-  max-width: 300;
+  max-width: 300px;
   padding: 20px;
 }
 .footer-logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 5px; /* space between logo and text */
 }
@@ -655,12 +660,14 @@ footer {
   position: absolute;
   bottom: 20px;
   left: 0;
-  width: 100%; /* span full width of footer */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 75px; /* same horizontal padding as footer-container */
+  padding: 0 50px;
   color: #8a8989;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .copyright a {
   text-decoration: none;
@@ -689,36 +696,198 @@ html,
 body {
   max-width: 100%;
 }
-@media (max-width: 992px) {
-  .hero-section,
-  .Second-Section,
-  .Third-Section,
-  .feature-section,
-  .popular-courses,
-  .easy-start {
-    flex-direction: column; /* side by side on larger screens */
-    text-align: left;
+
+@media (max-width: 1200px) {
+  .navbar .nav-links {
+    width: auto;
+    gap: 15px;
   }
-  .header .navbar .nav-links,
+  .navbar .title {
+    width: auto;
+  }
+  .navbar .auth {
+    width: auto;
+  }
+  .feature-section,
+  .popular-courses {
+    padding: 80px 30px;
+  }
+  .Third-Section {
+    padding: 50px 30px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 400px;
+    padding: 15px;
+    margin-top: 30px;
+  }
+   .navbar {
+    padding: 15px 20px;
+  }
+  .navbar .nav-links,
   #theme-switch,
-  .header .navbar .auth {
+  .navbar .auth {
     display: none;
   }
-  .header .navbar .toggle-btn {
+  .toggle-btn {
     display: block;
   }
-  .header .navbar .title {
+  .navbar .title {
     width: 100%;
   }
+  .hero-section {
+    margin-top: 30px;
+    padding-top: 40px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .Improve h1 {
+    font-size: clamp(20px, 5vw, 32px);
+  }
+  .Enroll button {
+  background-color: var(--color-nav-bar);
 }
-@media (min-width: 992px) {
+  .Second-Section {
+    padding: 50px 20px;
+  }
+  .Second-Section .stat {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .stat .stat-item {
+    border-right: none;
+    border-bottom: 2px solid #ecc67b;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+  .stat .stat-item:last-child {
+    border-bottom: none;
+  }
+  .Third-Section {
+    padding: 30px 20px;
+  }
+  .education-text h1 {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+  .feature-section {
+    padding: 50px 20px;
+  }
   .features-top {
-    grid-template-columns: 2.1fr 1fr; /* first column (special-feature) is wider */
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card {
+    padding: 20px 15px;
+  }
+  .special-feature {
+    padding: 30px 20px;
+  }
+  .special-feature img {
+    width: 12%;
+  }
+  .special-feature h2 {
+    font-size: clamp(20px, 4vw, 32px);
+  }
+  .special-feature button {
+    padding: 10px 16px;
+    font-size: 11px;
+    margin-top: 20px;
+  }
+  .popular-courses {
+    padding: 50px 20px;
+  }
+  .popular-courses h1 {
+    font-size: clamp(24px, 5vw, 42px);
+    padding: 0 10px;
+  }
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .course-card {
+    padding: 30px 15px;
+  }
+  .course-meta {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px 20px 20px;
+    text-align: center;
+  }
+  .easy-start {
+    padding: 40px 20px;
+  }
+  .easy-content h1 {
+    font-size: clamp(24px, 5vw, 42px);
+  }
+  .easy-content ul {
+    font-size: 16px;
+    padding: 0;
+    text-align: left;
+  }
+  .easy-image img {
+    max-width: 100%;
+  }
+  .cta-banner {
+    padding: 20px;
+  }
+  .cta-container {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  .cta-container img {
+    width: 200px;
+    max-width: 80%;
+  }
+  .cta-text h3 {
+    font-size: clamp(18px, 4vw, 24px);
+    line-height: 1.5;
+  }
+  .app-promo {
+    padding: 50px 20px;
+  }
+  .app-promo h2 {
+    padding: 40px 20px;
+    font-size: clamp(20px, 5vw, 36px);
+    max-width: 100%;
   }
 
-  /* allow the card to fill its grid column and add the requested right margin */
-  .features-top > .feature-card {
+
+ .footer-container {
+  flex-direction: column;
+  align-items: center;    
+  text-align: center;      
+}
+.footer-left{
+  text-align: center;
+}
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  gap: 10px;
+}
+.footer-logo{
+  justify-content: center;
+}
+
+  .copyright {
+    padding: 0 20px;
+    justify-content: center;
+    bottom: auto;
+    position: static;
     width: 100%;
-    justify-self: end; /* keep the card aligned toward the right of its column */
+    margin-top: 20px;
   }
 }
+
+
