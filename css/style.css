@@ -266,7 +266,7 @@ body {
 }
 
 .Third-Section {
-  padding: 50px;
+  padding: 60px;
   background-color: #fdf6e4;
   max-width: 100%;
 }
@@ -578,14 +578,7 @@ body {
   width: 300px;
 }
 
-@media (max-width: 992px) {
-  .cta-container {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-  }
-}
+
 .cta-text {
   padding: 20px 30px;
   margin-bottom: 55px;
