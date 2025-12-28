@@ -72,7 +72,7 @@ body {
 }
 
 .navbar .title img {
-  max-width: 5%;
+  width: 40px;
   height: auto;
 }
 .navbar .title a {
@@ -721,7 +721,7 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    min-height: 400px;
+    min-height: 800px;
     padding: 15px;
     margin-top: 30px;
   }
