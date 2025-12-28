@@ -62,8 +62,8 @@ body {
 }
 
 .navbar .title {
-    font-family: "Limelight";
-  font-weight: 800;
+  font-family: "Gravitas One", serif;
+  font-weight: 200;
   font-style: normal;
   font-size: 24px;
   display: flex;
